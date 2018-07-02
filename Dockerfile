@@ -32,7 +32,7 @@ ADD ./www.conf /usr/local/etc/php-fpm.d/www.conf
 #Update nginx config
 ADD ./nginx.conf /etc/nginx/
 ADD ./magento.conf /etc/nginx/site-enabled/
-RUN mkdir /etc/nginx/ssl /etc/nginx/site-enabled
+RUN mkdir /etc/nginx/ssl 
 
 ###### supervisord ######
 ADD ./supervisord.conf /etc/supervisord.conf
