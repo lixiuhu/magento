@@ -25,7 +25,7 @@ RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
     mv composer.phar /usr/local/bin/composer
 
 ###### change php.ini ######
-ADD pip.ini/usr/local/etc/php/
+ADD ./pip.ini /usr/local/etc/php/
 RUN sed -i -e "s/listen = 9000//g" /usr/local/etc/php-fpm.d/zz-docker.conf
 ADD ./www.conf /usr/local/etc/php-fpm.d/www.conf
 
