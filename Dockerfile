@@ -5,7 +5,7 @@ RUN apk --no-cache add g++ gcc make autoconf curl curl-dev bzip2 bzip2-dev zip i
     libmemcached libmemcached-dev zlib-dev cyrus-sasl-dev mysql-client nginx supervisor tzdata bash \
     libpng-dev freetype-dev libjpeg-turbo-dev libmcrypt-dev libpng libpng-dev gettext  gettext-dev  \
     libmcrypt libmcrypt-dev libxml2 libxml2-dev libxslt libxslt-dev 
-RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-freetype-dir=/usr/include/ --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 
 ##### Install memcached and redis packages
 RUN echo no | pecl install redis && \
